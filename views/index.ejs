@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Gift App</title>
+        <meta property="og:title" content="<%= giftName %> gifted <%= productID %> to you!">
+        <meta property="og:description" content="Click the link to claim it">
+        <meta property="og:image" content="<%= icon %>">
+    </head>
+    <body>
+        <h1><%= giftName %></h1>
+        <p>Icon: <%= icon %> <br> Product ID: <%= productID %> <br> You received this gift from: <%= senderName %></p>
+    </body>
+</html>
