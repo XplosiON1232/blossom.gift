@@ -1,9 +1,11 @@
+const path = require('path');
 const express = require('express');
 const app = express();
 const port = 3000;
 
 const ejs = require('ejs');
 app.set('view engine', 'ejs');
+app.use('',express.static(path.join(__dirname, 'public')));
 
 // const { default: axios } = require("axios");
 
@@ -27,7 +29,6 @@ app.get('/:id', (req, res) => {
     query
         .get()
         .then((docSnap) => {
-            console.log(docSnap);
             if (docSnap.exists) {
                 // Define data and fetch information
                 const data = docSnap.data();
